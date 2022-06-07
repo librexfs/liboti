@@ -1,7 +1,7 @@
 # Root project for OTI Saturn library
 cmake_minimum_required(VERSION 3.5)
 
-project(oti_reader C)
+project(liboti C)
 
 # Default to Release mode
 if(NOT CMAKE_BUILD_TYPE)

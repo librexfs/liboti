@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <ProjectGuid>{D62A9292-86C6-41A0-BB16-3333C2D35D62}</ProjectGuid>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\obj\</OutDir>
+    <IntDir>.\obj\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\bin\</OutDir>
+    <IntDir>.\obj\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\src\;$(IncludePath);</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../../include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\obj\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\obj\oti_lib.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\</ProgramDataBaseFileName>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\obj\oti_lib.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>lib/oti_lib.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\..\include;src;%(AdditionalIncludeDirectories);..\..\..\tests\common-sources;..\..\..\include\platform-dependent</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;DEBUG_MODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\obj\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\obj\oti_lib.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\obj\oti_lib.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>../bin/oti_lib.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\APIs\ActivateTransaction.c" />
+    <ClCompile Include="..\..\..\source\APIs\CallBootLoader.c" />
+    <ClCompile Include="..\..\..\source\APIs\Cancel.c" />
+    <ClCompile Include="..\..\..\source\APIs\DeleteCAPubKeys.c" />
+    <ClCompile Include="..\..\..\source\APIs\ExternalDisplay.c" />
+    <ClCompile Include="..\..\..\source\APIs\FlashPacket.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetFirmwareVersion.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetLCDMessage.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetSaturnConfig.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetSerialNumber.c" />
+    <ClCompile Include="..\..\..\source\APIs\GraphicDisplay.c" />
+    <ClCompile Include="..\..\..\source\APIs\LoadDefaultParams.c" />
+    <ClCompile Include="..\..\..\source\APIs\OnlineStatus.c" />
+    <ClCompile Include="..\..\..\source\APIs\OTIInit.c" />
+    <ClCompile Include="..\..\..\source\APIs\Outport.c" />
+    <ClCompile Include="..\..\..\source\APIs\OutportControl.c" />
+    <ClCompile Include="..\..\..\source\APIs\PatternsControl.c" />
+    <ClCompile Include="..\..\..\source\APIs\Ping.c" />
+    <ClCompile Include="..\..\..\source\APIs\ResetPCD.c" />
+    <ClCompile Include="..\..\..\source\APIs\RunApplication.c" />
+    <ClCompile Include="..\..\..\source\APIs\SelectLCDMessage.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetBaudRate.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetCAPubKeys.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetDebug.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetPort.c" />
+    <ClCompile Include="..\..\..\source\APIs\StoreLCDMessage.c" />
+    <ClCompile Include="..\..\..\source\APIs\UploadFirmwareOTIBoot.c" />
+    <ClCompile Include="..\..\..\source\APIs\UserInterfaceMode.c" />
+    <ClCompile Include="..\..\..\source\APIs\WriteDisplay.c" />
+    <ClCompile Include="..\..\..\source\core\ActivateTransactionParser.c" />
+    <ClCompile Include="..\..\..\source\core\Configuration.c" />
+    <ClCompile Include="..\..\..\source\core\SAT_Assert.c" />
+    <ClCompile Include="..\..\..\source\core\Poll.c" />
+    <ClCompile Include="..\..\..\source\core\Protocol.c" />
+    <ClCompile Include="..\..\..\source\core\RestoreFactorySettings.c" />
+    <ClCompile Include="..\..\..\source\core\TransparentData.c" />
+    <ClCompile Include="..\..\..\source\core\log.c" />
+    <ClCompile Include="..\..\..\source\core\TLV.c" />
+    <ClCompile Include="..\windows_platform\SerialComm.c" />
+    <ClCompile Include="..\windows_platform\windows_implementation.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\ActivateTransactionParser.h" />
+    <ClInclude Include="..\..\..\include\config.h" />
+    <ClInclude Include="..\..\..\include\frames.h" />
+    <ClInclude Include="..\..\..\include\SAT_Assert.h" />
+    <ClInclude Include="..\..\..\include\oti_types.h" />
+    <ClInclude Include="..\..\..\include\platform-dependent\platform_utils.h" />
+    <ClInclude Include="..\..\..\include\platform-dependent\serial.h" />
+    <ClInclude Include="..\..\..\include\otilib.h" />
+    <ClInclude Include="..\..\..\include\protocol.h" />
+    <ClInclude Include="..\..\..\include\tlv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

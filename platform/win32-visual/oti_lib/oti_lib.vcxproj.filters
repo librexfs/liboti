@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\core\TLV.c" />
+    <ClCompile Include="..\..\..\source\core\Protocol.c">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\windows_platform\SerialComm.c">
+      <Filter>platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\windows_platform\windows_implementation.c">
+      <Filter>platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\core\Configuration.c">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\core\log.c">
+      <Filter>debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\APIs\ActivateTransaction.c" />
+    <ClCompile Include="..\..\..\source\APIs\CallBootLoader.c" />
+    <ClCompile Include="..\..\..\source\APIs\Cancel.c" />
+    <ClCompile Include="..\..\..\source\APIs\DeleteCAPubKeys.c" />
+    <ClCompile Include="..\..\..\source\APIs\ExternalDisplay.c" />
+    <ClCompile Include="..\..\..\source\APIs\FlashPacket.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetFirmwareVersion.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetLCDMessage.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetSaturnConfig.c" />
+    <ClCompile Include="..\..\..\source\APIs\GetSerialNumber.c" />
+    <ClCompile Include="..\..\..\source\APIs\GraphicDisplay.c" />
+    <ClCompile Include="..\..\..\source\APIs\LoadDefaultParams.c" />
+    <ClCompile Include="..\..\..\source\APIs\OnlineStatus.c" />
+    <ClCompile Include="..\..\..\source\APIs\OTIInit.c" />
+    <ClCompile Include="..\..\..\source\APIs\Outport.c" />
+    <ClCompile Include="..\..\..\source\APIs\OutportControl.c" />
+    <ClCompile Include="..\..\..\source\APIs\Ping.c" />
+    <ClCompile Include="..\..\..\source\core\Poll.c" />
+    <ClCompile Include="..\..\..\source\core\RestoreFactorySettings.c" />
+    <ClCompile Include="..\..\..\source\core\TransparentData.c" />
+    <ClCompile Include="..\..\..\source\APIs\ResetPCD.c" />
+    <ClCompile Include="..\..\..\source\APIs\RunApplication.c" />
+    <ClCompile Include="..\..\..\source\APIs\SelectLCDMessage.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetBaudRate.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetCAPubKeys.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetDebug.c" />
+    <ClCompile Include="..\..\..\source\APIs\SetPort.c" />
+    <ClCompile Include="..\..\..\source\APIs\StoreLCDMessage.c" />
+    <ClCompile Include="..\..\..\source\APIs\UploadFirmwareOTIBoot.c" />
+    <ClCompile Include="..\..\..\source\APIs\UserInterfaceMode.c" />
+    <ClCompile Include="..\..\..\source\APIs\PatternsControl.c" />
+    <ClCompile Include="..\..\..\source\APIs\WriteDisplay.c" />
+    <ClCompile Include="..\..\..\source\core\SAT_Assert.c" />
+    <ClCompile Include="..\..\..\source\core\ActivateTransactionParser.c">
+      <Filter>protocol</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\frames.h" />
+    <ClInclude Include="..\..\..\include\otilib.h" />
+    <ClInclude Include="..\..\..\include\protocol.h" />
+    <ClInclude Include="..\..\..\include\tlv.h" />
+    <ClInclude Include="..\..\..\include\oti_types.h" />
+    <ClInclude Include="..\..\..\include\config.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\platform-dependent\serial.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\platform-dependent\platform_utils.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\ActivateTransactionParser.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\SAT_Assert.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="platform">
+      <UniqueIdentifier>{9dbf5090-71e3-4fad-9062-fd484318d0f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\Windows">
+      <UniqueIdentifier>{922d5aef-8688-47fc-9080-75faeece73a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol">
+      <UniqueIdentifier>{ac0a0b8f-67d3-48bd-80d9-677611c2a81d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{06cc004d-33c1-4324-8c50-b3bad1eb1af7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="debugging">
+      <UniqueIdentifier>{9f6b0675-6ad3-4fbf-a00f-6582088aa2fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
